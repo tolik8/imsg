@@ -1,0 +1,39 @@
+object Form1: TForm1
+  Left = 992
+  Height = 327
+  Top = 198
+  Width = 354
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsNone
+  Caption = 'Image Message'
+  ClientHeight = 327
+  ClientWidth = 354
+  FormStyle = fsSystemStayOnTop
+  OnCloseQuery = FormCloseQuery
+  OnCreate = FormCreate
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '1.8.4.0'
+  object Image1: TImage
+    Left = 0
+    Height = 312
+    Top = 0
+    Width = 336
+  end
+  object Label1: TLabel
+    Left = 16
+    Height = 1
+    Top = 16
+    Width = 1
+    Font.Color = 9573910
+    Font.Height = -53
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    left = 24
+    top = 56
+  end
+end
