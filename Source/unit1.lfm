@@ -4,7 +4,7 @@ object Form1: TForm1
   Top = 198
   Width = 354
   BorderIcons = [biSystemMenu]
-  BorderStyle = bsNone
+  BorderStyle = bsSingle
   Caption = 'Image Message'
   ClientHeight = 327
   ClientWidth = 354
@@ -13,7 +13,7 @@ object Form1: TForm1
   OnCreate = FormCreate
   OnShow = FormShow
   Position = poScreenCenter
-  LCLVersion = '2.0.10.0'
+  LCLVersion = '3.8.0.0'
   object Image1: TImage
     Left = 0
     Height = 312

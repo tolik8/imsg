@@ -23,7 +23,7 @@ type
   private
 
   public
-    ConfigFile, ImageName, CounterColor, ErrorMessage: String;
+    StartDir, ConfigFile, ImageName, CounterColor, ErrorMessage: String;
     Seconds, CounterTop, COunterLeft: Integer;
     AllowClose: Boolean;
 
@@ -80,7 +80,10 @@ end;
 
 procedure TForm1.FormCreate(Sender: TObject);
 begin
-    ConfigFile := ParamStr(1);
+    StartDir := ExtractFilePath(ParamStr(0));
+    if ParamStr(1) = ''
+        then ConfigFile := StartDir + 'imsg.ini'
+        else ConfigFile := ParamStr(1);
     read_ini(ConfigFile);
     if ErrorMessage <> '' then ShowMessage(ErrorMessage);
 end;
